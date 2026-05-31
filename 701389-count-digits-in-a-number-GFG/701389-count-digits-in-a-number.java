@@ -1,7 +1,12 @@
 class Solution {
     public static int countDigits(int n) {
         // Code here
-        return (int)Math.log10(n)+1;
+        int d=0;
+        while(n>0){
+            d++;
+            n/=10;
+        }
+        return d;
     }
 }
 
